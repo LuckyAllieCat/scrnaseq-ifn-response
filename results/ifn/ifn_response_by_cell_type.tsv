@@ -1,0 +1,11 @@
+cell_type	mean_delta	sd_delta	n_patients
+Dendritic cells	2.175	0.119	8
+CD14+ Monocytes	2.037	0.129	8
+FCGR3A+ Monocytes	1.833	0.137	8
+Plasmacytoid DCs	1.659	0.21	8
+B cells	1.473	0.064	8
+NK cells	1.465	0.09	8
+CD4 T cells	1.2	0.057	8
+CD8 T cells	1.198	0.106	8
+Megakaryocytes	1.134	0.175	8
+Erythrocytes	0.821	0.398	8

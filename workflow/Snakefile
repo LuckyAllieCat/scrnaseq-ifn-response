@@ -1,0 +1,179 @@
+# Single-cell IFN-beta response pipeline (Kang et al. 2018).
+# Run everything:   snakemake --cores 4
+# CI / quick test:  snakemake --cores 2 --configfile config/ci.yaml
+
+configfile: "config/config.yaml"
+
+OUT = config["out_root"]
+CFG = "config/config.yaml"
+# Extra --configfile overrides are passed to scripts as a merged YAML
+MERGED = f"{OUT}/results/config_used.yaml"
+PROC = f"{OUT}/data/processed"
+RES = f"{OUT}/results"
+FIG = f"{OUT}/figures"
+
+
+rule all:
+    input:
+        f"{RES}/summary.md",
+        f"{FIG}/umap_cell_type.png",
+        f"{FIG}/ifn_score_by_cell_type.png",
+        f"{FIG}/de_volcanoes.png",
+        f"{FIG}/de_top_genes_heatmap.png",
+
+
+rule write_config:
+    output:
+        MERGED,
+    params:
+        # changing any config value re-triggers this rule (and everything downstream)
+        cfg=lambda w: repr(dict(config)),
+    run:
+        import yaml
+        from pathlib import Path
+
+        Path(output[0]).parent.mkdir(parents=True, exist_ok=True)
+        with open(output[0], "w") as fh:
+            yaml.safe_dump(dict(config), fh, sort_keys=False)
+
+
+rule download:
+    output:
+        config["data"]["raw_path"],
+    log:
+        f"{OUT}/logs/download.log",
+    shell:
+        "python scripts/download_data.py --url {config[data][url]} "
+        "--sha256 {config[data][sha256]} --out {output} > {log} 2>&1"
+
+
+rule load:
+    input:
+        code=["scripts/load_data.py", "scripts/common.py"],
+        raw=config["data"]["raw_path"],
+        cfg=MERGED,
+    output:
+        f"{PROC}/01_loaded.h5ad",
+    log:
+        f"{OUT}/logs/load.log",
+    shell:
+        "python scripts/load_data.py --config {input.cfg} --input {input.raw} "
+        "--output {output} > {log} 2>&1"
+
+
+rule qc:
+    input:
+        code=["scripts/qc.py", "scripts/common.py"],
+        adata=f"{PROC}/01_loaded.h5ad",
+        cfg=MERGED,
+    output:
+        adata=f"{PROC}/02_qc.h5ad",
+        table=f"{RES}/qc/qc_thresholds.tsv",
+        fig=f"{FIG}/qc_distributions.png",
+    log:
+        f"{OUT}/logs/qc.log",
+    shell:
+        "python scripts/qc.py --config {input.cfg} --input {input.adata} "
+        "--output {output.adata} --table {output.table} --fig {output.fig} > {log} 2>&1"
+
+
+rule preprocess:
+    input:
+        code=["scripts/preprocess.py", "scripts/common.py"],
+        adata=f"{PROC}/02_qc.h5ad",
+        cfg=MERGED,
+    output:
+        adata=f"{PROC}/03_preprocessed.h5ad",
+        fig=f"{FIG}/pca_elbow.png",
+    log:
+        f"{OUT}/logs/preprocess.log",
+    shell:
+        "python scripts/preprocess.py --config {input.cfg} --input {input.adata} "
+        "--output {output.adata} --fig {output.fig} > {log} 2>&1"
+
+
+rule cluster:
+    input:
+        code=["scripts/cluster.py", "scripts/common.py"],
+        adata=f"{PROC}/03_preprocessed.h5ad",
+        cfg=MERGED,
+    output:
+        adata=f"{PROC}/04_clustered.h5ad",
+        table=f"{RES}/clustering/integration_assessment.tsv",
+        fig=f"{FIG}/umap_overview.png",
+    log:
+        f"{OUT}/logs/cluster.log",
+    shell:
+        "python scripts/cluster.py --config {input.cfg} --input {input.adata} "
+        "--output {output.adata} --table {output.table} --fig {output.fig} > {log} 2>&1"
+
+
+rule annotate:
+    input:
+        code=["scripts/annotate.py", "scripts/common.py"],
+        adata=f"{PROC}/04_clustered.h5ad",
+        cfg=MERGED,
+    output:
+        adata=f"{PROC}/05_annotated.h5ad",
+        outdir=directory(f"{RES}/annotation"),
+        dotplot=f"{FIG}/marker_dotplot.png",
+        umap=f"{FIG}/umap_cell_type.png",
+    log:
+        f"{OUT}/logs/annotate.log",
+    shell:
+        "python scripts/annotate.py --config {input.cfg} --input {input.adata} "
+        "--output {output.adata} --outdir {output.outdir} --dotplot {output.dotplot} "
+        "--umap {output.umap} > {log} 2>&1"
+
+
+rule ifn_score:
+    input:
+        code=["scripts/ifn_score.py", "scripts/common.py"],
+        adata=f"{PROC}/05_annotated.h5ad",
+        cfg=MERGED,
+    output:
+        table=f"{RES}/ifn/ifn_score_per_patient.tsv",
+        effect=f"{RES}/ifn/ifn_response_by_cell_type.tsv",
+        fig=f"{FIG}/ifn_score_by_cell_type.png",
+    log:
+        f"{OUT}/logs/ifn_score.log",
+    shell:
+        "python scripts/ifn_score.py --config {input.cfg} --input {input.adata} "
+        "--table {output.table} --effect {output.effect} --fig {output.fig} > {log} 2>&1"
+
+
+rule pseudobulk_de:
+    input:
+        code=["scripts/pseudobulk_de.py", "scripts/common.py"],
+        adata=f"{PROC}/05_annotated.h5ad",
+        cfg=MERGED,
+    output:
+        outdir=directory(f"{RES}/de"),
+        volcano=f"{FIG}/de_volcanoes.png",
+        heatmap=f"{FIG}/de_top_genes_heatmap.png",
+    threads: 4
+    log:
+        f"{OUT}/logs/pseudobulk_de.log",
+    shell:
+        "python scripts/pseudobulk_de.py --config {input.cfg} --input {input.adata} "
+        "--outdir {output.outdir} --volcano {output.volcano} --heatmap {output.heatmap} "
+        "--threads {threads} > {log} 2>&1"
+
+
+rule summary:
+    input:
+        code=["scripts/summarize.py", "scripts/common.py"],
+        cfg=MERGED,
+        qc=f"{RES}/qc/qc_thresholds.tsv",
+        integ=f"{RES}/clustering/integration_assessment.tsv",
+        annot=f"{RES}/annotation",
+        ifn=f"{RES}/ifn/ifn_response_by_cell_type.tsv",
+        de=f"{RES}/de",
+    output:
+        f"{RES}/summary.md",
+    log:
+        f"{OUT}/logs/summary.log",
+    shell:
+        "python scripts/summarize.py --config {input.cfg} --qc {input.qc} "
+        "--integration {input.integ} --annotation {input.annot} --ifn {input.ifn} "
+        "--de {input.de} --output {output} > {log} 2>&1"

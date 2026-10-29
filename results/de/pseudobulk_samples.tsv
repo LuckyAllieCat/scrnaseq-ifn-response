@@ -1,0 +1,161 @@
+	cell_type	patient	condition	n_cells
+B cells|patient_1015|ctrl	B cells	patient_1015	ctrl	438
+B cells|patient_1015|stim	B cells	patient_1015	stim	361
+B cells|patient_1016|ctrl	B cells	patient_1016	ctrl	124
+B cells|patient_1016|stim	B cells	patient_1016	stim	122
+B cells|patient_101|ctrl	B cells	patient_101	ctrl	108
+B cells|patient_101|stim	B cells	patient_101	stim	143
+B cells|patient_1039|ctrl	B cells	patient_1039	ctrl	27
+B cells|patient_1039|stim	B cells	patient_1039	stim	40
+B cells|patient_107|ctrl	B cells	patient_107	ctrl	43
+B cells|patient_107|stim	B cells	patient_107	stim	60
+B cells|patient_1244|ctrl	B cells	patient_1244	ctrl	115
+B cells|patient_1244|stim	B cells	patient_1244	stim	97
+B cells|patient_1256|ctrl	B cells	patient_1256	ctrl	215
+B cells|patient_1256|stim	B cells	patient_1256	stim	218
+B cells|patient_1488|ctrl	B cells	patient_1488	ctrl	212
+B cells|patient_1488|stim	B cells	patient_1488	stim	287
+CD14+ Monocytes|patient_1015|ctrl	CD14+ Monocytes	patient_1015	ctrl	805
+CD14+ Monocytes|patient_1015|stim	CD14+ Monocytes	patient_1015	stim	709
+CD14+ Monocytes|patient_1016|ctrl	CD14+ Monocytes	patient_1016	ctrl	375
+CD14+ Monocytes|patient_1016|stim	CD14+ Monocytes	patient_1016	stim	358
+CD14+ Monocytes|patient_101|ctrl	CD14+ Monocytes	patient_101	ctrl	198
+CD14+ Monocytes|patient_101|stim	CD14+ Monocytes	patient_101	stim	270
+CD14+ Monocytes|patient_1039|ctrl	CD14+ Monocytes	patient_1039	ctrl	119
+CD14+ Monocytes|patient_1039|stim	CD14+ Monocytes	patient_1039	stim	161
+CD14+ Monocytes|patient_107|ctrl	CD14+ Monocytes	patient_107	ctrl	205
+CD14+ Monocytes|patient_107|stim	CD14+ Monocytes	patient_107	stim	179
+CD14+ Monocytes|patient_1244|ctrl	CD14+ Monocytes	patient_1244	ctrl	403
+CD14+ Monocytes|patient_1244|stim	CD14+ Monocytes	patient_1244	stim	300
+CD14+ Monocytes|patient_1256|ctrl	CD14+ Monocytes	patient_1256	ctrl	386
+CD14+ Monocytes|patient_1256|stim	CD14+ Monocytes	patient_1256	stim	388
+CD14+ Monocytes|patient_1488|ctrl	CD14+ Monocytes	patient_1488	ctrl	295
+CD14+ Monocytes|patient_1488|stim	CD14+ Monocytes	patient_1488	stim	391
+CD4 T cells|patient_1015|ctrl	CD4 T cells	patient_1015	ctrl	812
+CD4 T cells|patient_1015|stim	CD4 T cells	patient_1015	stim	672
+CD4 T cells|patient_1016|ctrl	CD4 T cells	patient_1016	ctrl	448
+CD4 T cells|patient_1016|stim	CD4 T cells	patient_1016	stim	369
+CD4 T cells|patient_101|ctrl	CD4 T cells	patient_101	ctrl	282
+CD4 T cells|patient_101|stim	CD4 T cells	patient_101	stim	376
+CD4 T cells|patient_1039|ctrl	CD4 T cells	patient_1039	ctrl	168
+CD4 T cells|patient_1039|stim	CD4 T cells	patient_1039	stim	268
+CD4 T cells|patient_107|ctrl	CD4 T cells	patient_107	ctrl	160
+CD4 T cells|patient_107|stim	CD4 T cells	patient_107	stim	178
+CD4 T cells|patient_1244|ctrl	CD4 T cells	patient_1244	ctrl	991
+CD4 T cells|patient_1244|stim	CD4 T cells	patient_1244	stim	800
+CD4 T cells|patient_1256|ctrl	CD4 T cells	patient_1256	ctrl	976
+CD4 T cells|patient_1256|stim	CD4 T cells	patient_1256	stim	930
+CD4 T cells|patient_1488|ctrl	CD4 T cells	patient_1488	ctrl	1138
+CD4 T cells|patient_1488|stim	CD4 T cells	patient_1488	stim	1429
+CD8 T cells|patient_1015|ctrl	CD8 T cells	patient_1015	ctrl	179
+CD8 T cells|patient_1015|stim	CD8 T cells	patient_1015	stim	187
+CD8 T cells|patient_1016|ctrl	CD8 T cells	patient_1016	ctrl	304
+CD8 T cells|patient_1016|stim	CD8 T cells	patient_1016	stim	327
+CD8 T cells|patient_101|ctrl	CD8 T cells	patient_101	ctrl	71
+CD8 T cells|patient_101|stim	CD8 T cells	patient_101	stim	107
+CD8 T cells|patient_1039|ctrl	CD8 T cells	patient_1039	ctrl	31
+CD8 T cells|patient_1039|stim	CD8 T cells	patient_1039	stim	31
+CD8 T cells|patient_107|ctrl	CD8 T cells	patient_107	ctrl	19
+CD8 T cells|patient_107|stim	CD8 T cells	patient_107	stim	20
+CD8 T cells|patient_1244|ctrl	CD8 T cells	patient_1244	ctrl	93
+CD8 T cells|patient_1244|stim	CD8 T cells	patient_1244	stim	67
+CD8 T cells|patient_1256|ctrl	CD8 T cells	patient_1256	ctrl	137
+CD8 T cells|patient_1256|stim	CD8 T cells	patient_1256	stim	147
+CD8 T cells|patient_1488|ctrl	CD8 T cells	patient_1488	ctrl	59
+CD8 T cells|patient_1488|stim	CD8 T cells	patient_1488	stim	65
+Dendritic cells|patient_1015|ctrl	Dendritic cells	patient_1015	ctrl	47
+Dendritic cells|patient_1015|stim	Dendritic cells	patient_1015	stim	35
+Dendritic cells|patient_1016|ctrl	Dendritic cells	patient_1016	ctrl	30
+Dendritic cells|patient_1016|stim	Dendritic cells	patient_1016	stim	14
+Dendritic cells|patient_101|ctrl	Dendritic cells	patient_101	ctrl	25
+Dendritic cells|patient_101|stim	Dendritic cells	patient_101	stim	28
+Dendritic cells|patient_1039|ctrl	Dendritic cells	patient_1039	ctrl	11
+Dendritic cells|patient_1039|stim	Dendritic cells	patient_1039	stim	6
+Dendritic cells|patient_107|ctrl	Dendritic cells	patient_107	ctrl	15
+Dendritic cells|patient_107|stim	Dendritic cells	patient_107	stim	14
+Dendritic cells|patient_1244|ctrl	Dendritic cells	patient_1244	ctrl	60
+Dendritic cells|patient_1244|stim	Dendritic cells	patient_1244	stim	33
+Dendritic cells|patient_1256|ctrl	Dendritic cells	patient_1256	ctrl	33
+Dendritic cells|patient_1256|stim	Dendritic cells	patient_1256	stim	29
+Dendritic cells|patient_1488|ctrl	Dendritic cells	patient_1488	ctrl	36
+Dendritic cells|patient_1488|stim	Dendritic cells	patient_1488	stim	35
+Erythrocytes|patient_1015|ctrl	Erythrocytes	patient_1015	ctrl	6
+Erythrocytes|patient_1015|stim	Erythrocytes	patient_1015	stim	9
+Erythrocytes|patient_1016|ctrl	Erythrocytes	patient_1016	ctrl	3
+Erythrocytes|patient_1016|stim	Erythrocytes	patient_1016	stim	3
+Erythrocytes|patient_101|ctrl	Erythrocytes	patient_101	ctrl	3
+Erythrocytes|patient_101|stim	Erythrocytes	patient_101	stim	1
+Erythrocytes|patient_1039|ctrl	Erythrocytes	patient_1039	ctrl	44
+Erythrocytes|patient_1039|stim	Erythrocytes	patient_1039	stim	51
+Erythrocytes|patient_107|ctrl	Erythrocytes	patient_107	ctrl	2
+Erythrocytes|patient_107|stim	Erythrocytes	patient_107	stim	1
+Erythrocytes|patient_1244|ctrl	Erythrocytes	patient_1244	ctrl	2
+Erythrocytes|patient_1244|stim	Erythrocytes	patient_1244	stim	7
+Erythrocytes|patient_1256|ctrl	Erythrocytes	patient_1256	ctrl	4
+Erythrocytes|patient_1256|stim	Erythrocytes	patient_1256	stim	11
+Erythrocytes|patient_1488|ctrl	Erythrocytes	patient_1488	ctrl	10
+Erythrocytes|patient_1488|stim	Erythrocytes	patient_1488	stim	10
+FCGR3A+ Monocytes|patient_1015|ctrl	FCGR3A+ Monocytes	patient_1015	ctrl	147
+FCGR3A+ Monocytes|patient_1015|stim	FCGR3A+ Monocytes	patient_1015	stim	152
+FCGR3A+ Monocytes|patient_1016|ctrl	FCGR3A+ Monocytes	patient_1016	ctrl	76
+FCGR3A+ Monocytes|patient_1016|stim	FCGR3A+ Monocytes	patient_1016	stim	86
+FCGR3A+ Monocytes|patient_101|ctrl	FCGR3A+ Monocytes	patient_101	ctrl	72
+FCGR3A+ Monocytes|patient_101|stim	FCGR3A+ Monocytes	patient_101	stim	111
+FCGR3A+ Monocytes|patient_1039|ctrl	FCGR3A+ Monocytes	patient_1039	ctrl	15
+FCGR3A+ Monocytes|patient_1039|stim	FCGR3A+ Monocytes	patient_1039	stim	25
+FCGR3A+ Monocytes|patient_107|ctrl	FCGR3A+ Monocytes	patient_107	ctrl	22
+FCGR3A+ Monocytes|patient_107|stim	FCGR3A+ Monocytes	patient_107	stim	21
+FCGR3A+ Monocytes|patient_1244|ctrl	FCGR3A+ Monocytes	patient_1244	ctrl	40
+FCGR3A+ Monocytes|patient_1244|stim	FCGR3A+ Monocytes	patient_1244	stim	16
+FCGR3A+ Monocytes|patient_1256|ctrl	FCGR3A+ Monocytes	patient_1256	ctrl	42
+FCGR3A+ Monocytes|patient_1256|stim	FCGR3A+ Monocytes	patient_1256	stim	59
+FCGR3A+ Monocytes|patient_1488|ctrl	FCGR3A+ Monocytes	patient_1488	ctrl	67
+FCGR3A+ Monocytes|patient_1488|stim	FCGR3A+ Monocytes	patient_1488	stim	91
+Megakaryocytes|patient_1015|ctrl	Megakaryocytes	patient_1015	ctrl	35
+Megakaryocytes|patient_1015|stim	Megakaryocytes	patient_1015	stim	35
+Megakaryocytes|patient_1016|ctrl	Megakaryocytes	patient_1016	ctrl	23
+Megakaryocytes|patient_1016|stim	Megakaryocytes	patient_1016	stim	21
+Megakaryocytes|patient_101|ctrl	Megakaryocytes	patient_101	ctrl	15
+Megakaryocytes|patient_101|stim	Megakaryocytes	patient_101	stim	14
+Megakaryocytes|patient_1039|ctrl	Megakaryocytes	patient_1039	ctrl	5
+Megakaryocytes|patient_1039|stim	Megakaryocytes	patient_1039	stim	8
+Megakaryocytes|patient_107|ctrl	Megakaryocytes	patient_107	ctrl	9
+Megakaryocytes|patient_107|stim	Megakaryocytes	patient_107	stim	5
+Megakaryocytes|patient_1244|ctrl	Megakaryocytes	patient_1244	ctrl	38
+Megakaryocytes|patient_1244|stim	Megakaryocytes	patient_1244	stim	26
+Megakaryocytes|patient_1256|ctrl	Megakaryocytes	patient_1256	ctrl	38
+Megakaryocytes|patient_1256|stim	Megakaryocytes	patient_1256	stim	30
+Megakaryocytes|patient_1488|ctrl	Megakaryocytes	patient_1488	ctrl	44
+Megakaryocytes|patient_1488|stim	Megakaryocytes	patient_1488	stim	55
+NK cells|patient_1015|ctrl	NK cells	patient_1015	ctrl	191
+NK cells|patient_1015|stim	NK cells	patient_1015	stim	184
+NK cells|patient_1016|ctrl	NK cells	patient_1016	ctrl	314
+NK cells|patient_1016|stim	NK cells	patient_1016	stim	328
+NK cells|patient_101|ctrl	NK cells	patient_101	ctrl	73
+NK cells|patient_101|stim	NK cells	patient_101	stim	106
+NK cells|patient_1039|ctrl	NK cells	patient_1039	ctrl	23
+NK cells|patient_1039|stim	NK cells	patient_1039	stim	26
+NK cells|patient_107|ctrl	NK cells	patient_107	ctrl	39
+NK cells|patient_107|stim	NK cells	patient_107	stim	46
+NK cells|patient_1244|ctrl	NK cells	patient_1244	ctrl	113
+NK cells|patient_1244|stim	NK cells	patient_1244	stim	112
+NK cells|patient_1256|ctrl	NK cells	patient_1256	ctrl	241
+NK cells|patient_1256|stim	NK cells	patient_1256	stim	198
+NK cells|patient_1488|ctrl	NK cells	patient_1488	ctrl	119
+NK cells|patient_1488|stim	NK cells	patient_1488	stim	163
+Plasmacytoid DCs|patient_1015|ctrl	Plasmacytoid DCs	patient_1015	ctrl	14
+Plasmacytoid DCs|patient_1015|stim	Plasmacytoid DCs	patient_1015	stim	7
+Plasmacytoid DCs|patient_1016|ctrl	Plasmacytoid DCs	patient_1016	ctrl	3
+Plasmacytoid DCs|patient_1016|stim	Plasmacytoid DCs	patient_1016	stim	5
+Plasmacytoid DCs|patient_101|ctrl	Plasmacytoid DCs	patient_101	ctrl	4
+Plasmacytoid DCs|patient_101|stim	Plasmacytoid DCs	patient_101	stim	10
+Plasmacytoid DCs|patient_1039|ctrl	Plasmacytoid DCs	patient_1039	ctrl	2
+Plasmacytoid DCs|patient_1039|stim	Plasmacytoid DCs	patient_1039	stim	15
+Plasmacytoid DCs|patient_107|ctrl	Plasmacytoid DCs	patient_107	ctrl	2
+Plasmacytoid DCs|patient_107|stim	Plasmacytoid DCs	patient_107	stim	1
+Plasmacytoid DCs|patient_1244|ctrl	Plasmacytoid DCs	patient_1244	ctrl	7
+Plasmacytoid DCs|patient_1244|stim	Plasmacytoid DCs	patient_1244	stim	6
+Plasmacytoid DCs|patient_1256|ctrl	Plasmacytoid DCs	patient_1256	ctrl	8
+Plasmacytoid DCs|patient_1256|stim	Plasmacytoid DCs	patient_1256	stim	16
+Plasmacytoid DCs|patient_1488|ctrl	Plasmacytoid DCs	patient_1488	ctrl	12
+Plasmacytoid DCs|patient_1488|stim	Plasmacytoid DCs	patient_1488	stim	21

@@ -1,0 +1,64 @@
+# All tunable parameters for the pipeline. Override for quick runs with
+#   snakemake --cores 2 --configfile config/ci.yaml
+seed: 0
+out_root: "."            # where results/, figures/ and data/processed/ are written
+subsample_n: null        # e.g. 5000 for a quick local run; null = all cells
+
+data:
+  # Same file that pertpy's pt.dt.kang_2018() downloads (GEO GSE96583, processed by the authors)
+  url: "https://exampledata.scverse.org/pertpy/kang_2018.h5ad"
+  sha256: "e6a5adac64dcdeb36eaba27db49b63e0c64bb0ed4a64c6705971506b41c39830"
+  raw_path: "data/raw/kang_2018.h5ad"
+
+qc:
+  n_mads: 5              # outlier = > n MADs from median of log counts / log genes
+  n_mads_mt: 3
+  max_pct_mt_cap: 20     # hard ceiling only applied if MT- genes are present
+  min_cells_per_gene: 10
+
+preprocess:
+  target_sum: 10000
+  n_top_genes: 2000
+  n_comps: 50            # PCs computed; the number used is picked from the elbow
+  n_pcs: auto            # or an integer to override the elbow choice
+
+cluster:
+  n_neighbors: 15
+  leiden_resolution: 0.5
+  # Integrate (Harmony) on any key whose kNN mixing score is below this (1 = perfect mixing)
+  mixing_threshold: 0.8
+  integration_keys: [patient, condition]
+
+annotation:
+  # Canonical PBMC markers. Names match the authors' labels so agreement can be measured.
+  markers:
+    CD4 T cells: [CD3D, IL7R, CCR7, LDHB]
+    CD8 T cells: [CD8A, CD8B]
+    NK cells: [GNLY, NKG7, KLRF1]
+    B cells: [MS4A1, CD79A, CD79B]
+    CD14+ Monocytes: [CD14, LYZ, S100A8, S100A9]
+    FCGR3A+ Monocytes: [FCGR3A, MS4A7]
+    Dendritic cells: [FCER1A, CLEC10A]
+    Plasmacytoid DCs: [LILRA4, IL3RA, TSPAN13, GZMB]
+    Megakaryocytes: [PPBP, PF4]
+    Erythrocytes: [HBB, HBA1, HBA2]
+  # Our finer labels -> the authors' label, used only when measuring agreement
+  reference_names:
+    Plasmacytoid DCs: Dendritic cells
+
+ifn:
+  # Core interferon-stimulated genes (type I IFN signature)
+  genes: [ISG15, IFI6, IFIT1, IFIT2, IFIT3, IFIT5, MX1, MX2, OAS1, OAS2, OAS3, OASL,
+          RSAD2, IFI44, IFI44L, IFITM3, ISG20, STAT1, IRF7, XAF1, HERC5, EPSTI1,
+          CMPK2, LY6E, BST2, SAMD9L, PLSCR1, IFI35]
+
+de:
+  min_cells_per_sample: 10   # pseudobulk samples with fewer cells are dropped
+  min_patients: 3            # need >= this many patients with both conditions
+  min_count_per_gene: 10     # gene kept if total pseudobulk count >= this
+  padj: 0.05
+  lfc: 1.0
+  top_n_shared: 15           # strongest shared genes shown in the heatmap
+  top_n_heatmap: 4           # top specific genes per cell type in the heatmap
+  min_base_mean_heatmap: 50  # specific genes must be reasonably expressed to be shown
+  volcano_cell_types: 4      # largest N cell types get a volcano plot

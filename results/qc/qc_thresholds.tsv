@@ -1,0 +1,10 @@
+metric	value
+min_counts	145.932
+max_counts	10582.222
+min_genes	132.008
+max_genes	2031.961
+mt_genes_found	0.0
+doublets_flagged	188.0
+cells_before	24673.0
+cells_after	24463.0
+genes_after	13277.0

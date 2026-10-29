@@ -1,0 +1,18 @@
+# Tiny run for CI: a few hundred cells, relaxed pseudobulk limits so DE still runs.
+out_root: "ci_out"
+subsample_n: 400
+preprocess:
+  target_sum: 10000
+  n_top_genes: 1000
+  n_comps: 20
+  n_pcs: auto
+de:
+  min_cells_per_sample: 2
+  min_patients: 3
+  min_count_per_gene: 5
+  padj: 0.05
+  lfc: 1.0
+  top_n_shared: 5
+  top_n_heatmap: 2
+  min_base_mean_heatmap: 0
+  volcano_cell_types: 2

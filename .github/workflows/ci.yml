@@ -1,0 +1,35 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}   # login shell so the conda env is active
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+      - name: Unit tests
+        run: pytest -q tests
+      - name: Run the full pipeline on a 400-cell subsample
+        run: snakemake --cores 2 --configfile config/ci.yaml
+      - name: Check expected outputs exist
+        run: |
+          for f in results/summary.md figures/umap_cell_type.png figures/ifn_score_by_cell_type.png \
+                   figures/de_volcanoes.png figures/de_top_genes_heatmap.png; do
+            test -s "ci_out/$f" || { echo "missing $f"; exit 1; }
+          done
+          cat ci_out/results/summary.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ci-outputs
+          path: |
+            ci_out/results
+            ci_out/figures
+            ci_out/logs

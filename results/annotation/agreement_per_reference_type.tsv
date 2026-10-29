@@ -1,0 +1,9 @@
+ref_cell_type	recall_vs_reference
+B cells	0.989
+CD14+ Monocytes	0.975
+CD4 T cells	0.888
+CD8 T cells	0.612
+Dendritic cells	0.953
+FCGR3A+ Monocytes	0.946
+Megakaryocytes	0.0
+NK cells	0.985

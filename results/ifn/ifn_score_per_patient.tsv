@@ -1,0 +1,161 @@
+cell_type	condition	patient	ifn_score	n_cells
+B cells	ctrl	patient_101	-0.3768937862988848	108
+B cells	ctrl	patient_107	-0.39805704500772526	43
+B cells	ctrl	patient_1015	-0.2921718993524225	438
+B cells	ctrl	patient_1016	-0.30002751797964444	124
+B cells	ctrl	patient_1039	-0.3209760587500724	27
+B cells	ctrl	patient_1244	-0.4408002076443739	115
+B cells	ctrl	patient_1256	-0.3159599207968628	215
+B cells	ctrl	patient_1488	-0.3667487067687667	212
+B cells	stim	patient_101	1.1756645695924637	143
+B cells	stim	patient_107	1.0522761309916726	60
+B cells	stim	patient_1015	1.2443362379698863	361
+B cells	stim	patient_1016	1.2152621029989081	122
+B cells	stim	patient_1039	1.0867189384486577	40
+B cells	stim	patient_1244	0.9336730440453653	97
+B cells	stim	patient_1256	1.121578178014483	218
+B cells	stim	patient_1488	1.139896029237062	287
+CD14+ Monocytes	ctrl	patient_101	-0.494909598993066	198
+CD14+ Monocytes	ctrl	patient_107	-0.4444106484169573	205
+CD14+ Monocytes	ctrl	patient_1015	-0.23736255289165903	805
+CD14+ Monocytes	ctrl	patient_1016	-0.14211769656083667	375
+CD14+ Monocytes	ctrl	patient_1039	-0.3081655949209593	119
+CD14+ Monocytes	ctrl	patient_1244	-0.4518269610291625	403
+CD14+ Monocytes	ctrl	patient_1256	-0.3584977195348137	386
+CD14+ Monocytes	ctrl	patient_1488	-0.3985247660979746	295
+CD14+ Monocytes	stim	patient_101	1.5895222026852325	270
+CD14+ Monocytes	stim	patient_107	1.772487141341103	179
+CD14+ Monocytes	stim	patient_1015	1.7322623226379965	709
+CD14+ Monocytes	stim	patient_1016	1.6688885614390785	358
+CD14+ Monocytes	stim	patient_1039	1.6500444212503613	161
+CD14+ Monocytes	stim	patient_1244	1.7237805545804394	300
+CD14+ Monocytes	stim	patient_1256	1.67412764858415	388
+CD14+ Monocytes	stim	patient_1488	1.6523101142613599	391
+CD4 T cells	ctrl	patient_101	-0.3886809758558139	282
+CD4 T cells	ctrl	patient_107	-0.39814526779311044	160
+CD4 T cells	ctrl	patient_1015	-0.3555470910223003	812
+CD4 T cells	ctrl	patient_1016	-0.3727063859203924	448
+CD4 T cells	ctrl	patient_1039	-0.36866280980433885	168
+CD4 T cells	ctrl	patient_1244	-0.40021786134354514	991
+CD4 T cells	ctrl	patient_1256	-0.38137856615272675	976
+CD4 T cells	ctrl	patient_1488	-0.39685939302836504	1138
+CD4 T cells	stim	patient_101	0.8329093124629526	376
+CD4 T cells	stim	patient_107	0.7480793770160783	178
+CD4 T cells	stim	patient_1015	0.9197676651120427	672
+CD4 T cells	stim	patient_1016	0.7294587185596038	369
+CD4 T cells	stim	patient_1039	0.8602172144519658	268
+CD4 T cells	stim	patient_1244	0.7772911073973151	800
+CD4 T cells	stim	patient_1256	0.8748375223497599	930
+CD4 T cells	stim	patient_1488	0.7969630006431823	1429
+CD8 T cells	ctrl	patient_101	-0.3431527598822039	71
+CD8 T cells	ctrl	patient_107	-0.3253728860020576	19
+CD8 T cells	ctrl	patient_1015	-0.31528679795541964	179
+CD8 T cells	ctrl	patient_1016	-0.2869616526895853	304
+CD8 T cells	ctrl	patient_1039	-0.30653323272165417	31
+CD8 T cells	ctrl	patient_1244	-0.36634263828281727	93
+CD8 T cells	ctrl	patient_1256	-0.24678566803658994	137
+CD8 T cells	ctrl	patient_1488	-0.3412358852665501	59
+CD8 T cells	stim	patient_101	0.780809414526939	107
+CD8 T cells	stim	patient_107	0.7132360592513635	20
+CD8 T cells	stim	patient_1015	0.9966216615416617	187
+CD8 T cells	stim	patient_1016	0.8690239451001848	327
+CD8 T cells	stim	patient_1039	0.8615374611932275	31
+CD8 T cells	stim	patient_1244	0.8033899932931745	67
+CD8 T cells	stim	patient_1256	0.9960068221677312	147
+CD8 T cells	stim	patient_1488	1.0300952656197653	65
+Dendritic cells	ctrl	patient_101	-0.6366401255643998	25
+Dendritic cells	ctrl	patient_107	-0.6581110742344083	15
+Dendritic cells	ctrl	patient_1015	-0.4748677408503628	47
+Dendritic cells	ctrl	patient_1016	-0.40165512243751134	30
+Dendritic cells	ctrl	patient_1039	-0.5350573485569053	11
+Dendritic cells	ctrl	patient_1244	-0.5500269884475679	60
+Dendritic cells	ctrl	patient_1256	-0.5169202493513521	33
+Dendritic cells	ctrl	patient_1488	-0.6070747251117532	36
+Dendritic cells	stim	patient_101	1.4710610480091244	28
+Dendritic cells	stim	patient_107	1.7651501244461534	14
+Dendritic cells	stim	patient_1015	1.6569749253070118	35
+Dendritic cells	stim	patient_1016	1.700995810911047	14
+Dendritic cells	stim	patient_1039	1.5022233019291926	6
+Dendritic cells	stim	patient_1244	1.6687048850008326	33
+Dendritic cells	stim	patient_1256	1.62356288764985	29
+Dendritic cells	stim	patient_1488	1.6293250154575756	35
+Erythrocytes	ctrl	patient_101	-0.36115203376929905	3
+Erythrocytes	ctrl	patient_107	-0.2047267786560693	2
+Erythrocytes	ctrl	patient_1015	-0.15060241439726643	6
+Erythrocytes	ctrl	patient_1016	-0.32027989684252356	3
+Erythrocytes	ctrl	patient_1039	-0.02436375516580954	44
+Erythrocytes	ctrl	patient_1244	-0.2597139080559904	2
+Erythrocytes	ctrl	patient_1256	-0.17046598388782452	4
+Erythrocytes	ctrl	patient_1488	-0.30884925854882617	10
+Erythrocytes	stim	patient_101	0.7676534298114814	1
+Erythrocytes	stim	patient_107	0.14252940642623751	1
+Erythrocytes	stim	patient_1015	1.0206525418571246	9
+Erythrocytes	stim	patient_1016	0.4752797041542765	3
+Erythrocytes	stim	patient_1039	0.06750784198607768	51
+Erythrocytes	stim	patient_1244	0.619497385843526	7
+Erythrocytes	stim	patient_1256	0.8786904985339293	11
+Erythrocytes	stim	patient_1488	0.7974273981180209	10
+FCGR3A+ Monocytes	ctrl	patient_101	-0.3737596289509274	72
+FCGR3A+ Monocytes	ctrl	patient_107	-0.35324094631539993	22
+FCGR3A+ Monocytes	ctrl	patient_1015	-0.10405773024482402	147
+FCGR3A+ Monocytes	ctrl	patient_1016	0.010156358794898844	76
+FCGR3A+ Monocytes	ctrl	patient_1039	-0.1094699112636469	15
+FCGR3A+ Monocytes	ctrl	patient_1244	-0.4116031057126602	40
+FCGR3A+ Monocytes	ctrl	patient_1256	-0.22124155952883567	42
+FCGR3A+ Monocytes	ctrl	patient_1488	-0.34902635132190196	67
+FCGR3A+ Monocytes	stim	patient_101	1.50290877906365	111
+FCGR3A+ Monocytes	stim	patient_107	1.4912585193696952	21
+FCGR3A+ Monocytes	stim	patient_1015	1.7096170288782948	152
+FCGR3A+ Monocytes	stim	patient_1016	1.5987404349699523	86
+FCGR3A+ Monocytes	stim	patient_1039	1.6314444136946167	25
+FCGR3A+ Monocytes	stim	patient_1244	1.6511953853347763	16
+FCGR3A+ Monocytes	stim	patient_1256	1.5947711639267648	59
+FCGR3A+ Monocytes	stim	patient_1488	1.5702788109589754	91
+Megakaryocytes	ctrl	patient_101	-0.3515190171946596	15
+Megakaryocytes	ctrl	patient_107	-0.3887862716324564	9
+Megakaryocytes	ctrl	patient_1015	-0.2997741839240508	35
+Megakaryocytes	ctrl	patient_1016	-0.1547219895417869	23
+Megakaryocytes	ctrl	patient_1039	-0.37910565443468186	5
+Megakaryocytes	ctrl	patient_1244	-0.3973833883931529	38
+Megakaryocytes	ctrl	patient_1256	-0.3597569143057533	38
+Megakaryocytes	ctrl	patient_1488	-0.40644247650310167	44
+Megakaryocytes	stim	patient_101	0.8847506929450372	14
+Megakaryocytes	stim	patient_107	0.6974650921187056	5
+Megakaryocytes	stim	patient_1015	1.10111616818239	35
+Megakaryocytes	stim	patient_1016	0.6860754406359975	21
+Megakaryocytes	stim	patient_1039	0.5693641204656686	8
+Megakaryocytes	stim	patient_1244	0.7840784271447465	26
+Megakaryocytes	stim	patient_1256	0.8668219687031985	30
+Megakaryocytes	stim	patient_1488	0.7474573337974507	55
+NK cells	ctrl	patient_101	-0.319735392552229	73
+NK cells	ctrl	patient_107	-0.2738975277451398	39
+NK cells	ctrl	patient_1015	-0.13406712940684073	191
+NK cells	ctrl	patient_1016	-0.28179181675789583	314
+NK cells	ctrl	patient_1039	-0.1409618065203645	23
+NK cells	ctrl	patient_1244	-0.3136137473387715	113
+NK cells	ctrl	patient_1256	-0.17980663746109207	241
+NK cells	ctrl	patient_1488	-0.3335193469678117	119
+NK cells	stim	patient_101	1.1471396875941355	106
+NK cells	stim	patient_107	1.1444407203578242	46
+NK cells	stim	patient_1015	1.4263231605101188	184
+NK cells	stim	patient_1016	1.0304080804309483	328
+NK cells	stim	patient_1039	1.2472111084869284	26
+NK cells	stim	patient_1244	1.2009180997172098	112
+NK cells	stim	patient_1256	1.2995110071052516	198
+NK cells	stim	patient_1488	1.249137179497996	163
+Plasmacytoid DCs	ctrl	patient_101	-0.6500273584269731	4
+Plasmacytoid DCs	ctrl	patient_107	-0.4871415432885201	2
+Plasmacytoid DCs	ctrl	patient_1015	-0.45789677476229734	14
+Plasmacytoid DCs	ctrl	patient_1016	-0.19389257595108292	3
+Plasmacytoid DCs	ctrl	patient_1039	-0.4093192388866746	2
+Plasmacytoid DCs	ctrl	patient_1244	-0.4797173305400297	7
+Plasmacytoid DCs	ctrl	patient_1256	-0.5730677779377557	8
+Plasmacytoid DCs	ctrl	patient_1488	-0.5204946721058924	12
+Plasmacytoid DCs	stim	patient_101	1.2101904171087037	10
+Plasmacytoid DCs	stim	patient_107	1.162832465423763	1
+Plasmacytoid DCs	stim	patient_1015	1.3371001495007264	7
+Plasmacytoid DCs	stim	patient_1016	1.019791694536601	5
+Plasmacytoid DCs	stim	patient_1039	1.1292398267373958	15
+Plasmacytoid DCs	stim	patient_1244	1.336671620199125	6
+Plasmacytoid DCs	stim	patient_1256	1.1975900915737487	16
+Plasmacytoid DCs	stim	patient_1488	1.1087876226481872	21
