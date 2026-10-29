@@ -5,6 +5,7 @@ directly avoids installing pertpy just for a download.
 """
 import argparse
 import hashlib
+import shutil
 import urllib.request
 from pathlib import Path
 
@@ -28,7 +29,10 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     tmp = out.with_suffix(".part")
     print(f"Downloading {args.url}")
-    urllib.request.urlretrieve(args.url, tmp)
+    # The server rejects Python's default User-Agent (HTTP 403), so send our own
+    req = urllib.request.Request(args.url, headers={"User-Agent": "scrnaseq-ifn-pipeline/1.0"})
+    with urllib.request.urlopen(req) as resp, open(tmp, "wb") as fh:
+        shutil.copyfileobj(resp, fh)
     digest = sha256sum(tmp)
     if digest != args.sha256:
         tmp.unlink()
